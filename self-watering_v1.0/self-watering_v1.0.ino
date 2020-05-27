@@ -12,14 +12,15 @@ void setup() {
 
 void loop() {
   int sensor = analogRead(sensor);
-  lcd.setCursor(0,0);
-  lcd.print("H");
-  lcd.setCursor(3,0);
-  lcd.print(sensor);
   if (sensor > 200){
     digitalWrite(13, HIGH);
     }
   else{
     digitalWrite(13, LOW);
     }
+  lcd.setCursor(0,0);
+  lcd.print("H");
+  lcd.setCursor(3,0);
+  lcd.print(sensor);
+  delay(500);
 }
